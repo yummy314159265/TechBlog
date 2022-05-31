@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
       req.session.username = newUser.username;
       req.session.loggedIn = true;
 
-      res.json(newUser);
+      res.redirect('/dashboard');
     });
   } catch (err) {
     res.status(500).json(err);
